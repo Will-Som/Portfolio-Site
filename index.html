@@ -1,1 +1,106 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>William Som de Cerff | Portfolio</title><style>body{margin:0;font:16px Arial,sans-serif;background:#dceef8;color:#10243a;line-height:1.5}header,main,footer{padding:42px max(24px,calc((100% - 1050px)/2))}header,footer{background:#06213a;color:#fff}header h1{font-size:48px;margin:8px 0}.tag{color:#0875c9;font:12px monospace;text-transform:uppercase}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.card,.item{background:#fff;border:1px solid #d8e2ea;border-radius:8px;overflow:hidden}.slide{display:none}.slide.active{display:block}.slide img,.slide video{display:block;width:100%;height:auto;max-height:470px;background:#061628;object-fit:contain}.dots{text-align:center;padding:12px}.dot{width:10px;height:10px;border:0;border-radius:50%;margin:0 5px;background:#b8c7d3;cursor:pointer}.dot.active{background:#0875c9}.copy,.item{padding:20px}.item{margin:12px 0}.item p{margin:8px 0 0}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}@media(max-width:700px){.grid,.cards{grid-template-columns:1fr}header h1{font-size:38px}}</style></head><body><header><h1>William Som de Cerff</h1><p>Aerospace Engineering student at California Polytechnic State University, San Luis Obispo.</p></header><main><section><h2>Projects</h2><div class="grid" id="projects"></div></section><section><h2>Technical Experience & Student Engineering Teams</h2><div class="item"><b>Cal Poly Space Systems · Member · 2026</b><p>Contributed to the Liquid Propellant Subteam, specializing in injector design and flow characterization. Supporting the design and early development of a 50-lbf liquid rocket engine using CAD modeling, applying fluid dynamics principles, and iteratively prototyping.</p></div><div class="item"><b>Poly Electric Propulsion and Plasma Research · Member · 2026</b><p>Working to revitalize electric propulsion research at Cal Poly by establishing new test procedures and lab workflows. Assisting in the manufacturing and assembly of a Hall Effect Thruster, including component fabrication, tolerancing, and plasma diagnostics preparation.</p></div><div class="item"><b>FRC Robotics Team 7042 · 2022–2026</b><p>Served as Engineering Director, Chief Engineer, and Design Lead, overseeing mechanical design, system integration, and manufacturing. Earned the Design Creativity Award for three consecutive years by creating innovative mechanisms and engineering solutions, 2024–2026.</p></div></section><section><h2>Work Experience</h2><div class="cards"><div class="item"><b>Corky Carroll’s Surf School · Surfing Instructor</b><p>Summer 2026</p><ul><li>Delivered both individual instruction and high-volume summer programs, adapting teaching methods to meet client needs.</li><li>Prioritized safety by changing lesson plans based on ocean conditions.</li><li>Communicated clearly with participants and team members to coordinate activities.</li></ul></div><div class="item"><b>Shared Science · Academic Support Instructor</b><p>Summers 2024 & 2025</p><ul><li>Facilitated lessons, lab activities, and hands-on experiments for elementary students.</li><li>Collaborated with fellow instructors to refine lesson delivery.</li><li>Addressed behavioral challenges with patience and clear boundaries.</li></ul></div></div></section><section><h2>Skills</h2><div class="item"><b>Hardware:</b> Machining — CNC and Manual, 3D Printing, PCB assembly<br><b>Software:</b> SolidWorks, Java, Python, MATLAB</div></section></main><footer>wsomdece@calpoly.edu · Long Beach, CA</footer><script>const P=[['John Lemon','</p><ul><li>Winner of Los Angeles District Event</li><li>Winner of Creativity Award for an innovative turret wiring solution</li><li>Advanced to SoCal District Championships</li><li>Ended season in the top 25% of all teams in California, FRC&#39;s most competitive region</li></ul><p>',[['img','assets/john-lemon.png'],['video','assets/john-lemon.mov'],['img','assets/john-lemon-photo.jpg']]],['Mantis','</p><ul><li>Semi-Finalists and Alliance Captains x2</li><li>Winner of Creativity Award for pusher plate scoring mechanism (shown in video), 98% scoring accuracy</li></ul><p>',[['img','assets/mantis-cover.jpg'],['video','assets/mantis.mp4'],['img','assets/mantis.jpg'],['img','assets/mantis-second.jpg']]],['Theseus','</p><ul><li>Event Finalists and Alliance Captains</li><li>Winner of Creativity Award for entirely 3D printed coral (PVC pipe) handling mechanism</li></ul><p>',[['img','assets/theseus-cover.jpg'],['img','assets/theseus-second.jpg'],['video','assets/theseus.mp4'],['img','assets/theseus.jpg'],['img','assets/theseus-last.jpg']]],['FPV Drone','</p><ul><li>Found compatible parts, assembled, programmed, tested, flew (!), crashed, tweaked flight configuration, repaired, and re-tested</li><li>Optimized for speed while staying under the FAA&#39;s 250g weight limit</li></ul><p>',[['img','assets/fpv-drone.jpg'],['img','assets/fpv-drone-second.jpg']]]];projects.innerHTML=P.map(([n,c,m])=>`<article class="card"><div>${m.map(([t,s],i)=>`<div class="slide ${i?'':'active'}">${t==='img'?`<img src="${s}" alt="${n}">`:`<video muted playsinline preload="metadata"><source src="${s}"></video>`}</div>`).join('')}</div><div class="dots">${m.map((_,i)=>`<button class="dot ${i?'':'active'}"></button>`).join('')}</div><div class="copy"><h3>${n}</h3><p>${c}</p></div></article>`).join('');document.querySelectorAll('.card').forEach(card=>card.querySelectorAll('.dot').forEach((b,i)=>b.onclick=()=>{card.querySelectorAll('video').forEach(v=>v.pause());card.querySelectorAll('.dot,.slide').forEach(x=>x.classList.remove('active'));b.classList.add('active');const s=card.querySelectorAll('.slide')[i];s.classList.add('active');const v=s.querySelector('video');if(v)v.play()}));</script></body></html>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>William Som de Cerff | Portfolio</title>
+<style>body{margin:0;font:16px Arial,sans-serif;background:#dceef8;color:#10243a;line-height:1.5}header,main,footer{padding:42px max(24px,calc((100% - 1050px)/2))}header,footer{background:#06213a;color:#fff}header h1{font-size:48px;margin:8px 0}.tag{color:#0875c9;font:12px monospace;text-transform:uppercase}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.card,.item{background:#fff;border:1px solid #d8e2ea;border-radius:8px;overflow:hidden}.slide{display:none}.slide.active{display:block}.slide img,.slide video{display:block;width:100%;height:auto;max-height:470px;background:#061628;object-fit:contain}.dots{text-align:center;padding:12px}.dot{width:10px;height:10px;border:0;border-radius:50%;margin:0 5px;background:#b8c7d3;cursor:pointer}.dot.active{background:#0875c9}.copy,.item{padding:20px}.item{margin:12px 0}.item p{margin:8px 0 0}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}@media(max-width:700px){.grid,.cards{grid-template-columns:1fr}header h1{font-size:38px}}</style>
+</head>
+<body>
+<!-- Header and contact information -->
+<header>
+<h1>William Som de Cerff</h1>
+<p>Aerospace Engineering student at California Polytechnic State University, San Luis Obispo.</p>
+<p>
+<a href="mailto:wsomdece@calpoly.edu">wsomdece@calpoly.edu</a> · Long Beach, CA</p>
+</header>
+<!-- Portfolio content -->
+<main>
+<!-- Project media carousels -->
+<section>
+<h2>Projects</h2>
+<div class="grid" id="projects">
+</div>
+</section>
+<section>
+<h2>Technical Experience & Student Engineering Teams</h2>
+<div class="item">
+<b>Cal Poly Space Systems · Member · 2026</b>
+<p>Contributed to the Liquid Propellant Subteam, specializing in injector design and flow characterization. Supporting the design and early development of a 50-lbf liquid rocket engine using CAD modeling, applying fluid dynamics principles, and iteratively prototyping.</p>
+</div>
+<div class="item">
+<b>Poly Electric Propulsion and Plasma Research · Member · 2026</b>
+<p>Working to revitalize electric propulsion research at Cal Poly by establishing new test procedures and lab workflows. Assisting in the manufacturing and assembly of a Hall Effect Thruster, including component fabrication, tolerancing, and plasma diagnostics preparation.</p>
+</div>
+<div class="item">
+<b>FRC Robotics Team 7042 · 2022–2026</b>
+<p>Served as Engineering Director, Chief Engineer, and Design Lead, overseeing mechanical design, system integration, and manufacturing. Earned the Design Creativity Award for three consecutive years by creating innovative mechanisms and engineering solutions, 2024–2026.</p>
+</div>
+</section>
+<section>
+<h2>Work Experience</h2>
+<div class="cards">
+<div class="item">
+<b>Corky Carroll’s Surf School · Surfing Instructor</b>
+<p>Summer 2026</p>
+<ul>
+<li>Delivered both individual instruction and high-volume summer programs, adapting teaching methods to meet client needs.</li>
+<li>Prioritized safety by changing lesson plans based on ocean conditions.</li>
+<li>Communicated clearly with participants and team members to coordinate activities.</li>
+</ul>
+</div>
+<div class="item">
+<b>Shared Science · Academic Support Instructor</b>
+<p>Summers 2024 & 2025</p>
+<ul>
+<li>Facilitated lessons, lab activities, and hands-on experiments for elementary students.</li>
+<li>Collaborated with fellow instructors to refine lesson delivery.</li>
+<li>Addressed behavioral challenges with patience and clear boundaries.</li>
+</ul>
+</div>
+</div>
+</section>
+<section>
+<h2>Skills</h2>
+<div class="item">
+<b>Hardware:</b> Machining — CNC and Manual, 3D Printing, PCB assembly<br>
+<b>Software:</b> SolidWorks, Java, Python, MATLAB, GitHub</div>
+</section>
+</main>
+<footer>wsomdece@calpoly.edu · Long Beach, CA</footer>
+<!-- Dot navigation and video playback -->
+<script>const P=[['John Lemon','</p>
+<ul>
+<li>Winner of Los Angeles District Event</li>
+<li>Winner of Creativity Award for an innovative turret wiring solution</li>
+<li>Advanced to SoCal District Championships</li>
+<li>Ended season in the top 25% of all teams in California, FRC&#39;s most competitive region</li>
+</ul>
+<p>',[['img','assets/john-lemon.png'],['video','assets/john-lemon.mov'],['img','assets/john-lemon-photo.jpg']]],['Mantis','</p>
+<ul>
+<li>Semi-Finalists and Alliance Captains x2</li>
+<li>Winner of Creativity Award for pusher plate scoring mechanism (shown in video), 98% scoring accuracy</li>
+</ul>
+<p>',[['img','assets/mantis-cover.jpg'],['video','assets/mantis.mp4'],['img','assets/mantis.jpg'],['img','assets/mantis-second.jpg']]],['Theseus','</p>
+<ul>
+<li>Event Finalists and Alliance Captains</li>
+<li>Winner of Creativity Award for entirely 3D printed coral (PVC pipe) handling mechanism</li>
+</ul>
+<p>',[['img','assets/theseus-cover.jpg'],['img','assets/theseus-second.jpg'],['video','assets/theseus.mp4'],['img','assets/theseus.jpg'],['img','assets/theseus-last.jpg']]],['FPV Drone','</p>
+<ul>
+<li>Found compatible parts, assembled, programmed, tested, flew (!), crashed, tweaked flight configuration, repaired, and re-tested</li>
+<li>Optimized for speed while staying under the FAA&#39;s 250g weight limit</li>
+</ul>
+<p>',[['img','assets/fpv-drone.jpg'],['img','assets/fpv-drone-second.jpg']]]];projects.innerHTML=P.map(([n,c,m])=>`<article class="card">
+<div>${m.map(([t,s],i)=>`<div class="slide ${i?'':'active'}">${t==='img'?`<img src="${s}" alt="${n}">`:`<video muted playsinline preload="metadata">
+<source src="${s}">
+</video>`}</div>`).join('')}</div>
+<div class="dots">${m.map((_,i)=>`<button class="dot ${i?'':'active'}">
+</button>`).join('')}</div>
+<div class="copy">
+<h3>${n}</h3>
+<p>${c}</p>
+</div>
+</article>`).join('');document.querySelectorAll('.card').forEach(card=>card.querySelectorAll('.dot').forEach((b,i)=>b.onclick=()=>{card.querySelectorAll('video').forEach(v=>v.pause());card.querySelectorAll('.dot,.slide').forEach(x=>x.classList.remove('active'));b.classList.add('active');const s=card.querySelectorAll('.slide')[i];s.classList.add('active');const v=s.querySelector('video');if(v)v.play()}));</script>
+</body>
+</html>
