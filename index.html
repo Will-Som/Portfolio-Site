@@ -1,106 +1,90 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>William Som de Cerff | Portfolio</title>
-<style>body{margin:0;font:16px Arial,sans-serif;background:#dceef8;color:#10243a;line-height:1.5}header,main{padding:42px max(24px,calc((100% - 1050px)/2))}header{background:#174568;color:#fff}header h1{font-size:48px;margin:8px 0}.tag{color:#0875c9;font:12px monospace;text-transform:uppercase}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.card,.item{background:#fff;border:1px solid #d8e2ea;border-radius:8px;overflow:hidden}.slide{display:none}.slide.active{display:block}.slide img,.slide video{display:block;width:100%;height:auto;max-height:470px;background:#061628;object-fit:contain}.dots{text-align:center;padding:12px}.dot{width:10px;height:10px;border:0;border-radius:50%;margin:0 5px;background:#b8c7d3;cursor:pointer}.dot.active{background:#0875c9}.copy,.item{padding:20px}.item{margin:12px 0}.item p{margin:8px 0 0}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}@media(max-width:700px){.grid,.cards{grid-template-columns:1fr}header h1{font-size:38px}}header a{color:#fff;text-decoration:none;font-weight:bold;font-size:18px}</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>William Som de Cerff | Portfolio</title>
+  <style>
+    :root { --ink: #10243a; --blue: #176da5; --header: #06213a; --page: #eaf6fc; --card: #fff; --line: #c8dbe6; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 16px/1.5 Arial, sans-serif; color: var(--ink); background: var(--page); }
+    header, main { padding: 36px max(24px, calc((100% - 1050px) / 2)); }
+    header { background: var(--header); color: #fff; border-bottom: 1px solid #0e3653; }
+    .eyebrow { margin: 0 0 6px; color: #64dce8; font: 700 0.78rem/1.2 monospace; letter-spacing: 0.08em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(2.25rem, 7vw, 3.25rem); }
+    .contact { margin: 10px 0 0; font-size: 1rem; }
+    .contact a { color: #fff; font-weight: 700; text-decoration: underline; text-decoration-color: #64dce8; text-underline-offset: 3px; }
+    section { margin: 0 0 42px; }
+    h2 { margin: 0 0 16px; font-size: 1.55rem; }
+    .grid, .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+    .card, .item { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgb(18 67 93 / 7%); }
+    .slide { display: none; background: #0a2335; }
+    .slide.active { display: block; }
+    .slide img, .slide video { display: block; width: 100%; height: auto; max-height: 520px; background: #0a2335; object-fit: contain; }
+    .dots { display: flex; justify-content: center; gap: 10px; padding: 12px; }
+    .dot { width: 10px; height: 10px; padding: 0; border: 0; border-radius: 50%; background: #b8c7d3; cursor: pointer; }
+    .dot.active { background: var(--blue); transform: scale(1.2); }
+    .copy, .item { padding: 20px; }
+    .copy h3 { margin: 0 0 8px; font-size: 1.3rem; }
+    .copy p, .item p { margin: 8px 0 0; }
+    .copy ul, .item ul { margin: 10px 0 0; padding-left: 20px; }
+    .item { margin: 12px 0; }
+    .cards .item { margin: 0; }
+    @media (max-width: 700px) { .grid, .cards { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
-<!-- Header and contact information -->
-<header>
-<h1>William Som de Cerff</h1>
-<p>Aerospace Engineering student at California Polytechnic State University, San Luis Obispo.</p>
-<p>
-<a href="mailto:wsomdece@calpoly.edu">wsomdece@calpoly.edu</a> · Long Beach, CA</p>
-</header>
-<!-- Portfolio content -->
-<main>
-<!-- Project media carousels -->
-<section>
-<h2>Projects</h2>
-<div class="grid" id="projects">
-</div>
-</section>
-<section>
-<h2>Technical Experience & Student Engineering Teams</h2>
-<div class="item">
-<b>Cal Poly Space Systems · Member · 2026</b>
-<p>Contributed to the Liquid Propellant Subteam, specializing in injector design and flow characterization. Supporting the design and early development of a 50-lbf liquid rocket engine using CAD modeling, applying fluid dynamics principles, and iteratively prototyping.</p>
-</div>
-<div class="item">
-<b>Poly Electric Propulsion and Plasma Research · Member · 2026</b>
-<p>Working to revitalize electric propulsion research at Cal Poly by establishing new test procedures and lab workflows. Assisting in the manufacturing and assembly of a Hall Effect Thruster, including component fabrication, tolerancing, and plasma diagnostics preparation.</p>
-</div>
-<div class="item">
-<b>FRC Robotics Team 7042 · 2022–2026</b>
-<p>Served as Engineering Director, Chief Engineer, and Design Lead, overseeing mechanical design, system integration, and manufacturing. Earned the Design Creativity Award for three consecutive years by creating innovative mechanisms and engineering solutions, 2024–2026.</p>
-</div>
-</section>
-<section>
-<h2>Skills</h2>
-<div class="item">
-<b>Hardware:</b> Machining — CNC and Manual, 3D Printing, PCB assembly<br>
-<b>Software:</b> SolidWorks, Java, Python, MATLAB</div>
-</section>
-<section>
-<h2>Work Experience</h2>
-<div class="cards">
-<div class="item">
-<b>Corky Carroll’s Surf School · Surfing Instructor</b>
-<p>Summer 2026</p>
-<ul>
-<li>Delivered both individual instruction and high-volume summer programs, adapting teaching methods to meet client needs.</li>
-<li>Prioritized safety by changing lesson plans based on ocean conditions.</li>
-<li>Communicated clearly with participants and team members to coordinate activities.</li>
-</ul>
-</div>
-<div class="item">
-<b>Shared Science · Academic Support Instructor</b>
-<p>Summers 2024 & 2025</p>
-<ul>
-<li>Facilitated lessons, lab activities, and hands-on experiments for elementary students.</li>
-<li>Collaborated with fellow instructors to refine lesson delivery.</li>
-<li>Addressed behavioral challenges with patience and clear boundaries. </li>
-</ul>
-</div>
-</div>
-</section>
-</main>
-
-<!-- Dot navigation and video playback -->
-<script>const P=[['John Lemon',`</p>
-<ul>
-<li>Winner of Los Angeles District Event</li>
-<li>Winner of Creativity Award for an innovative turret wiring solution</li>
-<li>Advanced to SoCal District Championships</li>
-<li>Ended season in the top 25% of all teams in California, FRC&#39;s most competitive region</li>
-</ul>
-<p>`,[['img','assets/john-lemon.png'],['video','assets/john-lemon.mov'],['img','assets/john-lemon-photo.jpg']]],['Mantis',`</p>
-<ul>
-<li>Semi-Finalists and Alliance Captains x2</li>
-<li>Winner of Creativity Award for pusher plate scoring mechanism (shown in video), 98% scoring accuracy</li>
-</ul>
-<p>`,[['img','assets/mantis-cover.jpg'],['video','assets/mantis.mp4'],['img','assets/mantis.jpg'],['img','assets/mantis-second.jpg']]],['Theseus',`</p>
-<ul>
-<li>Event Finalists and Alliance Captains</li>
-<li>Winner of Creativity Award for entirely 3D printed coral (PVC pipe) handling mechanism</li>
-</ul>
-<p>`,[['img','assets/theseus-cover.jpg'],['img','assets/theseus-second.jpg'],['video','assets/theseus.mp4'],['img','assets/theseus.jpg'],['img','assets/theseus-last.jpg']]],['FPV Drone',`</p>
-<ul>
-<li>Found compatible parts, assembled, programmed, tested, flew (!), crashed, tweaked flight configuration, repaired, and re-tested</li>
-<li>Optimized for speed while staying under the FAA&#39;s 250g weight limit</li>
-</ul>
-<p>`,[['img','assets/fpv-drone.jpg'],['img','assets/fpv-drone-second.jpg']]]];projects.innerHTML=P.map(([n,c,m])=>`<article class="card">
-<div>${m.map(([t,s],i)=>`<div class="slide ${i?'':'active'}">${t==='img'?`<img src="${s}" alt="${n}">`:`<video muted playsinline preload="metadata">
-<source src="${s}">
-</video>`}</div>`).join('')}</div>
-<div class="dots">${m.map((_,i)=>`<button class="dot ${i?'':'active'}">
-</button>`).join('')}</div>
-<div class="copy">
-<h3>${n}</h3>
-<p>${c}</p>
-</div>
-</article>`).join('');document.querySelectorAll('.card').forEach(card=>card.querySelectorAll('.dot').forEach((b,i)=>b.onclick=()=>{card.querySelectorAll('video').forEach(v=>v.pause());card.querySelectorAll('.dot,.slide').forEach(x=>x.classList.remove('active'));b.classList.add('active');const s=card.querySelectorAll('.slide')[i];s.classList.add('active');const v=s.querySelector('video');if(v)v.play()}));</script>
+  <header>
+    <p class="eyebrow">Cal Poly SLO · Aerospace Engineering</p>
+    <h1>William Som de Cerff</h1>
+    <p class="contact"><a href="mailto:wsomdece@calpoly.edu">wsomdece@calpoly.edu</a> · Long Beach, CA</p>
+  </header>
+  <main>
+    <section><h2>Projects</h2><div class="grid" id="projects"></div></section>
+    <section><h2>Skills</h2><div class="item"><b>Hardware:</b> Machining — CNC and Manual, 3D Printing, PCB assembly<br><b>Software:</b> SolidWorks, Java, Python, MATLAB</div></section>
+    <section>
+      <h2>Technical Experience &amp; Student Engineering Teams</h2>
+      <div class="item"><b>Cal Poly Space Systems · Member · 2026</b><p>Contributed to the Liquid Propellant Subteam, specializing in injector design and flow characterization. Supporting the design and early development of a 50-lbf liquid rocket engine using CAD modeling, applying fluid dynamics principles, and iteratively prototyping.</p></div>
+      <div class="item"><b>Poly Electric Propulsion and Plasma Research · Member · 2026</b><p>Working to revitalize electric propulsion research at Cal Poly by establishing new test procedures and lab workflows. Assisting in the manufacturing and assembly of a Hall Effect Thruster, including component fabrication, tolerancing, and plasma diagnostics preparation.</p></div>
+      <div class="item"><b>FRC Robotics Team 7042 · 2022–2026</b><p>Served as Engineering Director, Chief Engineer, and Design Lead, overseeing mechanical design, system integration, and manufacturing. Earned the Design Creativity Award for three consecutive years by creating innovative mechanisms and engineering solutions, 2024–2026.</p></div>
+    </section>
+    <section>
+      <h2>Work Experience</h2>
+      <div class="cards">
+        <div class="item"><b>Corky Carroll’s Surf School · Surfing Instructor</b><p>Summer 2026</p><ul><li>Delivered both individual instruction and high-volume summer programs, adapting teaching methods to meet client needs.</li><li>Prioritized safety by changing lesson plans based on ocean conditions.</li><li>Communicated clearly with participants and team members to coordinate activities.</li></ul></div>
+        <div class="item"><b>Shared Science · Academic Support Instructor</b><p>Summers 2024 &amp; 2025</p><ul><li>Facilitated lessons, lab activities, and hands-on experiments for elementary students.</li><li>Collaborated with fellow instructors to refine lesson delivery.</li><li>Addressed behavioral challenges with patience and clear boundaries.</li></ul></div>
+      </div>
+    </section>
+  </main>
+  <script>
+    // Each project uses dots to switch its media; videos only play while selected.
+    const projects = [
+      { title: 'Liquid Rocket Engine', description: ['50 lbf engine using Nitrous Oxide and Ethanol', 'Completed isentropic calculations in MATLAB', 'Designed in SolidWorks', 'Hotfire by the end of fall 2026 semester'], media: [['img', 'assets/liquid-rocket-engine-1.png'], ['img', 'assets/liquid-rocket-engine-2.png']] },
+      { title: 'John Lemon', description: ['Winner of Los Angeles District Event', 'Winner of Creativity Award for an innovative turret wiring solution', 'Advanced to SoCal District Championships', 'Ended season in the top 25% of all teams in California, FRC’s most competitive region'], media: [['img', 'assets/john-lemon.png'], ['video', 'assets/john-lemon.mov'], ['img', 'assets/john-lemon-photo.jpg']] },
+      { title: 'Mantis', description: ['Semi-Finalists and Alliance Captains x2', 'Winner of Creativity Award for “pusher plate” scoring mechanism (shown in video), 98% scoring accuracy'], media: [['img', 'assets/mantis-cover.jpg'], ['video', 'assets/mantis.mp4'], ['img', 'assets/mantis.jpg'], ['img', 'assets/mantis-second.jpg']] },
+      { title: 'Theseus', description: ['Event Finalists and Alliance Captains', 'Winner of Creativity Award for entirely 3D printed coral (PVC pipe) handling mechanism'], media: [['img', 'assets/theseus.jpg'], ['video', 'assets/theseus.mp4']] },
+      { title: 'FPV Drone', description: ['Found compatible parts, assembled, programmed, tested, flew (!), crashed, tweaked flight configuration, repaired, and re-tested', 'Optimized for speed while staying under the FAA’s 250g weight limit'], media: [['img', 'assets/fpv-drone.jpg']] }
+    ];
+    const projectGrid = document.querySelector('#projects');
+    projectGrid.innerHTML = projects.map((project) => `
+      <article class="card">
+        ${project.media.map(([type, source], index) => `<div class="slide ${index === 0 ? 'active' : ''}">${type === 'img' ? `<img src="${source}" alt="${project.title}">` : `<video muted playsinline preload="metadata"><source src="${source}"></video>`}</div>`).join('')}
+        <div class="dots" aria-label="${project.title} media">${project.media.map((_, index) => `<button class="dot ${index === 0 ? 'active' : ''}" aria-label="Show media ${index + 1}"></button>`).join('')}</div>
+        <div class="copy"><h3>${project.title}</h3><ul>${project.description.map((line) => `<li>${line}</li>`).join('')}</ul></div>
+      </article>`).join('');
+    document.querySelectorAll('.card').forEach((card) => {
+      const slides = card.querySelectorAll('.slide');
+      const dots = card.querySelectorAll('.dot');
+      dots.forEach((dot, index) => dot.addEventListener('click', () => {
+        card.querySelectorAll('video').forEach((video) => video.pause());
+        slides.forEach((slide) => slide.classList.remove('active'));
+        dots.forEach((otherDot) => otherDot.classList.remove('active'));
+        slides[index].classList.add('active');
+        dot.classList.add('active');
+        const activeVideo = slides[index].querySelector('video');
+        if (activeVideo) activeVideo.play().catch(() => {});
+      }));
+    });
+  </script>
 </body>
 </html>
